@@ -1,10 +1,12 @@
 package com.example.codeblog.models;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+@Entity
 public class Blog {
 
     @NotNull
@@ -40,6 +42,12 @@ public class Blog {
         this.body = body;
     }
 
+    public Blog(){}
+
+    public Blog(String title, String Body){
+        this.title = title;
+        this.body = body;
+    }
 
 
 }
